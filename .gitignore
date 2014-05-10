@@ -44,3 +44,4 @@ htdocs/package.json
 # Ignore IDE files
 .idea
 
+vendor/*
