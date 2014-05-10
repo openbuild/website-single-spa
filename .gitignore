@@ -45,3 +45,4 @@ htdocs/package.json
 .idea
 
 vendor/*
+htdocs/lib/*
