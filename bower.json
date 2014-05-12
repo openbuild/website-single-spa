@@ -9,7 +9,7 @@
 	"font-awesome": ">=4",
 	"knockout": ">=2.3",
 	"moment": ">=2.5",
-	"openbuild-js-core": ">=0.1",
+	"openbuild-js-core": "git@github.com:openbuild/js-core.git",
 	"qunit": ">=1.14",
 	"requirejs": ">=2.1",
 	"toastr": ">=2",
