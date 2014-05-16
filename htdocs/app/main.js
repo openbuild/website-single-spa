@@ -33,7 +33,7 @@
 	}
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/router', 'openbuild/dataservice'],  function (system, app, viewLocator, router, dataservice) {
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/router', 'openbuild/dataservice', 'bootstrap', 'jquery', 'ko'],  function (system, app, viewLocator, router, dataservice, bootstrap, jquery, ko) {
 
     system.debug(true);
 
@@ -77,7 +77,8 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/rout
 		};
 
 		app.setRoot('shell', 'entrance');
-			
+		app.showMessage("OpenBuild (Sheffield) LTD uses cookies. Some may have been set already. <a href='/terms-cookies.obd'>Read about managing our cookies.</a> If you continue to use the site, we'll assume you're happy to accept.", "OpenBuild - Cookie message");
+		
 	}).fail(function(error){
 
 		require(['toastr'], function(toastr){
@@ -90,5 +91,20 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/rout
 		});
 
 	});
+	
+	ko.bindingHandlers.closeBootstrapNavigationMenuOnClick = {
+
+		init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext){
+			// This will be called when the binding is first applied to an element
+			// Set up any initial state, event handlers, etc. here
+			jquery(element).on('click', 'a.navbar-link', null, function(){
+				var navbarToggle = $('.navbar-toggle');
+				if (navbarToggle.is(':visible')) {
+					navbarToggle.trigger('click');
+				}
+			});
+			
+		}
+	};
 		
 });

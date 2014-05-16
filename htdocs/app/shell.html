@@ -16,9 +16,9 @@
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 			
-				<ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
+				<ul class="nav navbar-nav" data-bind="foreach: router.navigationModel, closeBootstrapNavigationMenuOnClick: router.navigationModel">
 					<li data-bind="css: { active: isActive }">
-						<a data-bind="attr: { href: hash }, html: title"></a>
+						<a class="navbar-link" data-bind="attr: { href: hash }, html: title"></a>
 					</li>
 				</ul>
 			</nav>
