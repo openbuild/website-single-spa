@@ -10,7 +10,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-					<i class="icon-home"></i>
+					<i class="glyphicon glyphicon-home"></i>
 					<span>OpenBuild</span>
 				</a>
 			</div>
@@ -21,6 +21,20 @@
 						<a class="navbar-link" data-bind="attr: { href: hash }, html: title"></a>
 					</li>
 				</ul>
+				
+				<form class="navbar-form navbar-right" role="form" data-bind="submit:search">
+					<div class="navbar-nav">
+						<div class="input-group" style="width:200px;">
+							<input type="text" class="form-control" placeholder="Search">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" data-bind="click:search">
+									<span class="glyphicon glyphicon-search"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+				</form>
+				
 			</nav>
 		</div>
 	</header>
