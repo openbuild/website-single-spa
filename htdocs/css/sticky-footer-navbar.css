@@ -1,39 +1,28 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 100px;
-}
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 100px;
-  background-color: #f5f5f5;
+#footer{
+	position:relative;
+	top: 50px;
 }
 
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 120px 15px 0;
-}
-.container .text-muted {
-  margin: 20px 0;
+#footer > img{
+	position:absolute;
+	left:0;
+	top:0;
+	width: 100%;
 }
 
-#footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+#footer > div.container{
+	z-index:100;
+	position:absolute;    
+	font-weight:bold;
+	width: 80%;
+	top:50px;
+	margin-left: 10%;
+    background: url('/images/trans.png');
+    text-align: center;
+    color: #b2dba1;
 }
 
-code {
-  font-size: 80%;
-}
+#footer > div.container a:link {color:#b2dba1;}
+#footer > div.container a:visited {color:#b2dba1;}
+#footer > div.container a:hover {color:#b2dba1;}
+#footer > div.container a:active {color:#b2dba1;}
