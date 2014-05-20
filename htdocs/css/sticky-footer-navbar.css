@@ -26,3 +26,10 @@
 #footer > div.container a:visited {color:#b2dba1;}
 #footer > div.container a:hover {color:#b2dba1;}
 #footer > div.container a:active {color:#b2dba1;}
+
+#thanks{
+	z-index:100;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
