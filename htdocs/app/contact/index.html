@@ -26,7 +26,7 @@
 						</button>
 					</span>
 				</div>
-				<span class="help-block"></span>
+				<span class="help-block" data-bind="text: firstNameMessage"></span>
 			</div>
 		
 			<div class="form-group" data-bind="css: lastNameStatus">
@@ -39,7 +39,7 @@
 						</button>
 					</span>
 				</div>
-				<span class="help-block"></span>
+				<span class="help-block" data-bind="text: lastNameMessage"></span>
 			</div>
 			
 			<div class="form-group" data-bind="css: emailStatus">
@@ -52,7 +52,7 @@
 						</button>
 					</span>
 				</div>
-				<span class="help-block"></span>
+				<span class="help-block" data-bind="text: emailMessage"></span>
 			</div>
 			
 			<div class="form-group" data-bind="css: phoneStatus">
@@ -65,11 +65,11 @@
 						</button>
 					</span>
 				</div>
-				<span class="help-block"></span>
+				<span class="help-block" data-bind="text: phoneMessage"></span>
 			</div>
 			
 			<div class="form-group" data-bind="css: messageStatus">
-				<div class="input-group" data-bind="css: { success: validation.state('message') == 'success', error: validation.state('message') == 'error' }">
+				<div class="input-group">
 					<span class="input-group-addon"><label for="email">Message</label></span>
 					<textarea id="message" data-bind="value: message" class="form-control" placeholder="Message" style="height:200px;"></textarea>
 					<span class="input-group-btn">
@@ -78,7 +78,7 @@
 						</button>
 					</span>
 				</div>
-				<span class="help-block"></span>
+				<span class="help-block" data-bind="text: messageMessage"></span>
 			</div>
 			
 			<button type="submit" class="btn btn-default">Submit</button>
