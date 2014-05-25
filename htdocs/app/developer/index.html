@@ -1,10 +1,3 @@
-<div class="jumbotron">
-	<div class="container">
-		<h1>Developer</h1>
-		<p>This toolkit enables you to test the API</p>
-	</div>
-</div>
-
 <div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-title">Developer toolkit</h3>
@@ -12,14 +5,38 @@
 	<div class="panel-body">
 		<div class="col-md-6">
 			<h2>Request</h2>
-			<input type="text" data-bind="value:messageUri, valueUpdate:'afterkeydown'" style="width=100%;" placeholder="uri">
-			<textarea id="messageData" data-bind="value:messageData, valueUpdate:'afterkeydown'" style="width:100%; height:250px;" placeholder="data to send to the server - should be well formed json."></textarea>
-			<input id="messageSubmit" data-bind="click:sendData, enable:messageData" type="button" value="WebSocket">
-			<input id="messageSubmit" data-bind="click:sendAjax, enable:messageData, compose:{transition: 'entrance'}" type="button" value="AJAX">
+			
+			<div class="form-group" data-bind="css: uriStatus">
+				<div class="input-group">
+					<span class="input-group-addon"><label for="uri">URI</label></span>
+					<input type="text" data-bind="value: uri, valueUpdate: 'afterkeydown'" id="uri" class="form-control" placeholder="uri">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" data-bind="click: help.bind($data, 'uri')">
+							<span class="glyphicon glyphicon-question-sign"></span>
+						</button>
+					</span>
+				</div>
+				<span class="help-block" data-bind="text: uriMessage"></span>
+			</div>
+			
+			<div class="form-group" data-bind="css: messageStatus">
+				<div class="input-group">
+					<span class="input-group-addon"><label for="email">Message</label></span>
+					<textarea id="message" data-bind="value: message" class="form-control" placeholder="Data to send to the server - should be well formed json." style="height:200px;"></textarea>
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" data-bind="click: help.bind($data, 'message')" style="height:200px;">
+							<span class="glyphicon glyphicon-question-sign"></span>
+						</button>
+					</span>
+				</div>
+				<span class="help-block" data-bind="text: messageMessage"></span>
+			</div>
+			<input id="messageSubmit" data-bind="click:sendData, enable:message" type="button" value="WebSocket">
+			<input id="messageSubmit" data-bind="click:sendAjax, enable:message, compose:{transition: 'entrance'}" type="button" value="AJAX">
 		</div>
 		<div class="col-md-6">
 			<h2>Response</h2>
-			<textarea id="messageResponse" data-bind="value:messageResponse" style="width:100%; height:250px;" placeholder="the last set of data returned by the server."></textarea>
+			<pre><span class="code" data-bind="text:response"></span></pre>
 		</div>
 	</div>
 </div>
