@@ -33,7 +33,7 @@
 	}
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/router', 'openbuild/dataservice', 'bootstrap', 'jquery', 'ko'],  function (system, app, viewLocator, router, dataservice, bootstrap, jquery, ko) {
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/router', 'plugins/dialog', 'openbuild/dataservice', 'bootstrap', 'jquery', 'ko'],  function (system, app, viewLocator, router, dialog, dataservice, bootstrap, jquery, ko) {
 
     system.debug(true);
 
@@ -77,7 +77,19 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'plugins/rout
 		};
 
 		app.setRoot('shell', 'entrance');
-		app.showMessage("OpenBuild (Sheffield) LTD uses cookies. Some may have been set already. <a href='/terms-cookies.obd'>Read about managing our cookies.</a> If you continue to use the site, we'll assume you're happy to accept.", "OpenBuild - Cookie message");
+		
+		dialog.MessageBox.setViewUrl('message-html.html');
+		
+		dialog.MessageBox.prototype.dialogOption = function (dialogResult){
+			console.log('TESTING');
+			console.log(dialogResult);
+			dialog.close(this, dialogResult);
+		};
+		
+		dialog.showMessage("OpenBuild (Sheffield) LTD uses cookies. Some may have been set already. <a href='/terms-cookies.obd'>Read about managing our cookies.</a> If you continue to use the site, we'll assume you're happy to accept.", "OpenBuild - Cookie message").then(function(dialogResult){
+			//do something with the dialog result here
+			console.log(dialogResult);
+		});
 		
 	}).fail(function(error){
 
