@@ -1,41 +1,21 @@
 {
-	"name": "openbuild/openbuild",
-	"description": "OpenBuild PHP framework.",
-	"keywords": ["framework","event-loop"],
+	"name": "openbuild/website-single-spa",
+	"description": "OpenBuild SPA template.",
+	"keywords": ["spa", "knockout", "durandal"],
 	"license": "GPL3, MIT",
+	"minimum-stability": "dev",
+	"repositories": [
+	    {
+		"url": "https://github.com/openbuild/core.git",
+		"type": "git",
+		"reference":"master"
+	    }
+	],
 	"require": {
 		"php": ">=5.4.0",
-		"erusev/parsedown": ">=0.9.4",
-		"cboden/Ratchet": "@dev",
-		"guzzlehttp/guzzle": "~4.0",
-		"igorw/config-service-provider": ">=1.2",
-		"mongofill/mongofill": "@dev",
-		"monolog/monolog": ">=1.0.0",
-		"react/react": ">=0.4",
-		"silex/silex": ">=1.0",
-		"symfony/browser-kit": ">=2.3",
-		"symfony/config":">=2.3",
-		"symfony/form": ">=2.3",
-		"symfony/locale": ">2.3",	
-		"symfony/process": ">=2.3",
-		"symfony/security": ">=2.3",
-		"symfony/translation": ">=2.3",
-		"symfony/twig-bridge": ">=2.3",
-		"symfony/validator": ">=2.3",
-		"symfony/yaml": ">=2.3",
-		"twig/twig": ">=1.0"
+		"openbuild/core": "@dev"
 	},
 	"require-dev": {
 		"phpunit/phpunit": ">=3.0"
-	},
-	"suggest": {
-		"ext-libevent": "Faster event-loop implementation.",
-		"ext-libev": "Faster event-loop implementation.",
-		"ext-event": "Faster event-loop implementation."
-	},
-	"autoload": {
-		"psr-0": {
-			"OpenBuild": "src/OpenBuild/src/"
-		}
 	}
 }
