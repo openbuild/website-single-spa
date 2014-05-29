@@ -25,29 +25,32 @@
 		<link rel="stylesheet" href="/lib/toastr/toastr.css" />
 		<link rel="stylesheet" href="/lib/qunit/qunit/qunit.css" />
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-	<script type="text/javascript">
-		// Let the library know where WebSocketMain.swf is:
-		window.WEB_SOCKET_SWF_LOCATION = "/lib/web-socket-js/WebSocketMain.swf";
-		window.WEB_SOCKET_DEBUG = true;
-		//window.WEB_SOCKET_FORCE_FLASH = true;
-        </script>
+		<script type="text/javascript">
+
+			// Let the library know where WebSocketMain.swf is:
+			window.WEB_SOCKET_SWF_LOCATION = "/lib/web-socket-js/WebSocketMain.swf";
+			window.WEB_SOCKET_DEBUG = true;
+			//window.WEB_SOCKET_FORCE_FLASH = true;
+			window.WEB_SOCKET_URI = 'ws://danny-lewiss-macbook-air.local:8129';
+		</script>
 		
-        <script type="text/javascript">
-            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-                var msViewportStyle = document.createElement("style");
-                var mq = "@@-ms-viewport{width:auto!important}";
-                msViewportStyle.appendChild(document.createTextNode(mq));
-                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-        	}
+		<script type="text/javascript">
+		
+			if(navigator.userAgent.match(/IEMobile\/10\.0/)){
+				var msViewportStyle = document.createElement("style");
+				var mq = "@@-ms-viewport{width:auto!important}";
+				msViewportStyle.appendChild(document.createTextNode(mq));
+				document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+			}
         	
-        	if(! window.console){
+			if(! window.console){
         	
 				window.console = {
 					log : function(unknown) {
@@ -57,18 +60,21 @@
 			
 			}
         	
-		    </script>
+		</script>
 
 		<script type="text/javascript">
-		    var nua = navigator.userAgent
-		    var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
-		    if (isAndroid) {
-		      $('select.form-control').removeClass('form-control').css('width', '100%')
-		      }
-		  </script>
+				
+			var nua = navigator.userAgent
+			var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+
+			if(isAndroid){
+				$('select.form-control').removeClass('form-control').css('width', '100%')
+			}
+	
+		</script>
         
-    </head>
-    <body>
+	</head>
+	<body>
     	
         <div id="applicationHost">
             <div class="splash">
