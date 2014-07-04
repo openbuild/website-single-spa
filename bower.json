@@ -1,18 +1,19 @@
 {
-    "name": "openbuild",
-    "private": true,
-    "dependencies": {
-	"bootstrap" : ">=3",
-	"durandal" : ">=2",
-	"font-awesome": ">=4",
-	"jquery" : ">=1.9 <=2.0",
-	"font-awesome": ">=4",
-	"knockout": ">=2.3",
-	"moment": ">=2.5",
-	"openbuild-js-core": "git@github.com:openbuild/js-core.git",
-	"qunit": ">=1.14",
-	"requirejs": ">=2.1",
-	"toastr": ">=2",
-	"web-socket-js": ">=1"
-    }
+	"name": "openbuild",
+	"private": true,
+	"dependencies": {
+		"bootstrap": ">=3",
+		"bootstrap-386": "git@github.com:kristopolous/BOOTSTRA.386.git",
+		"durandal" : ">=2",
+		"font-awesome": ">=4",
+		"jquery" : ">=1.9 <=2.0",
+		"font-awesome": ">=4",
+		"knockout": ">=2.3",
+		"moment": ">=2.5",
+		"openbuild-js-core": "git@github.com:openbuild/js-core.git",
+		"qunit": ">=1.14",
+		"requirejs": ">=2.1",
+		"toastr": ">=2",
+		"web-socket-js": ">=1"
+	}
 }
